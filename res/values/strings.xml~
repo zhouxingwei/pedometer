@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">iPosition</string>
+    <string name="action_settings">Settings</string>
+    <string name="Scroe">Scroe</string>
+    <string name="v100">10000</string>
+    <string name="imu">imu-test</string>
+    <string name="pedometer">pedometer</string>
+    <string name="gnss">gnsstool</string>
+    <string name="Options">Options</string>
+    <string name="configuration">configuration</string>
+    <string name="indoor">indoor</string>
+    <string name="contact">Contact Me</string>
+    <string name="disnum">distance</string>
+    <string name="stepdis">0.0km</string>
+    <string name="numbers">0</string>
+    <string name="pedocount">steps</string>
+    <string name="Done">Done</string>
+    <string name="accdocount">加速度(x,y,z)</string>
+    <string name="gydocount">陀螺仪(x,y,z)</string>
+</resources>
