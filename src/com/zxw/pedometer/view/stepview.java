@@ -74,11 +74,39 @@ public class stepview extends View{
 	public void onDraw(Canvas canvas)
 	{
 		String str = Integer.toString(pmeter.stepnum);
+		float angle;
 		textwidth = (int)mTextPaint.measureText(str, 0, str.length());
-		
+		switch(pmeter.stepnum/(int)mTotalStep)
+		{
+			case 1:
+				mProcessPaint.setColor(0x58ab47bc); 
+				mTextPaint.setColor(0x58ab47bc);
+				mRingPaint.setColor(0x58ab47bc);
+				break;
+			case 2:
+				mProcessPaint.setColor(0x58ec407a); 
+				mTextPaint.setColor(0x58ec407a);
+				mRingPaint.setColor(0x58ec407a);
+				break;
+			case 3:
+				mProcessPaint.setColor(0x58ef5350); 
+				mTextPaint.setColor(0x58ef5350);
+				mRingPaint.setColor(0x58ef5350);
+				break;
+
+			default:
+				mProcessPaint.setColor(0x582196F3); 
+				mTextPaint.setColor(0x582196F3);
+				mRingPaint.setColor(0x582196F3);
+				break;
+		}
+		angle = (float)pmeter.stepnum/mTotalStep;
+		while(angle >= 1)
+		{
+			angle = angle - 1;
+		}
 		canvas.drawCircle(width/2,height/2,width/2-50,mRingPaint);
-		
-		canvas.drawArc(mRectF, -90,((float)pmeter.stepnum/mTotalStep)*360, false, mProcessPaint);
+		canvas.drawArc(mRectF, -90,angle*360, false, mProcessPaint);
 		canvas.drawCircle(width/2,height/2,width/2-150,mRingPaint);
 		canvas.drawText(str, width/2 - textwidth/2, height/2 + 18, mTextPaint);
 		super.onDraw(canvas);

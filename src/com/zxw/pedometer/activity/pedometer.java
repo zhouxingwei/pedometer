@@ -72,7 +72,7 @@ public class pedometer extends Activity implements SensorEventListener{
 				{
 					stacSwitch++;
 					//workingNum = workingNum + stepnum - oldstepnum;
-					if(stacSwitch > 3)
+					if(stacSwitch > 2)
 					{
 						workmode = SPORT_MODE;
 						stacSwitch = 0;
@@ -87,7 +87,7 @@ public class pedometer extends Activity implements SensorEventListener{
 				if(workmode == SPORT_MODE && allstep == oldstepnum)
 				{
 					sportSwitch++;
-					if(sportSwitch >4)
+					if(sportSwitch > 5)
 					{
 						workmode = STATIC_MODE;
 						sportSwitch = 0;
